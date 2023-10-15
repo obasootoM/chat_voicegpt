@@ -2,7 +2,7 @@ import 'package:chat_voicegpt/model/chat_model.dart';
 import 'package:chat_voicegpt/provider/chat_provider.dart';
 import 'package:chat_voicegpt/service/chat_service.dart';
 import 'package:chat_voicegpt/service/voice.dart';
-import 'package:chat_voicegpt/widget/toggle.dart';
+import 'package:chat_voicegpt/features/widget/toggle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -1,5 +1,5 @@
 import 'package:chat_voicegpt/provider/provider.dart';
-import 'package:chat_voicegpt/widget/twitch.dart';
+import 'package:chat_voicegpt/features/widget/twitch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -1,5 +1,5 @@
 import 'package:chat_voicegpt/constant/constant.dart';
-import 'package:chat_voicegpt/home_screen/home_screen.dart';
+import 'package:chat_voicegpt/features/splash_screen/splash_screen.dart';
 import 'package:chat_voicegpt/provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -21,7 +21,7 @@ class MyApp extends ConsumerWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: actionProvider == Themes.dark ? ThemeMode.dark : ThemeMode.light,
-      home: const HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }

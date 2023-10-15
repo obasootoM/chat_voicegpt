@@ -1,7 +1,7 @@
 import 'package:chat_voicegpt/constant/custom_field.dart';
 import 'package:chat_voicegpt/provider/chat_provider.dart';
-import 'package:chat_voicegpt/widget/app_bar.dart';
-import 'package:chat_voicegpt/widget/chat_message.dart';
+import 'package:chat_voicegpt/features/widget/app_bar.dart';
+import 'package:chat_voicegpt/features/widget/chat_message.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
