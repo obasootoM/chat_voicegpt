@@ -20,6 +20,7 @@ class _CustomFieldState extends ConsumerState<CustomField> {
   ChatApi chatApi = ChatApi();
   final VoiceAuth voiceAuth = VoiceAuth();
   var isLoading = false;
+  late FocusNode _node;
 
   InputMode inputMode = InputMode.voice;
   void setInputmode(InputMode input) {
@@ -31,7 +32,14 @@ class _CustomFieldState extends ConsumerState<CustomField> {
   @override
   void initState() {
     voiceAuth.initspeech();
+    _node = FocusNode();
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _node.dispose();
+    super.dispose();
   }
 
   void sendTextMessages(String text) async {
@@ -85,7 +93,8 @@ class _CustomFieldState extends ConsumerState<CustomField> {
           controller: widget.controller,
           decoration: InputDecoration(
             hintText: 'type here',
-            hintStyle: TextStyle(color: Theme.of(context).colorScheme.onPrimary),
+            hintStyle:
+                TextStyle(color: Theme.of(context).colorScheme.onPrimary),
             focusedBorder:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
             enabledBorder: OutlineInputBorder(
@@ -105,6 +114,9 @@ class _CustomFieldState extends ConsumerState<CustomField> {
           final message = widget.controller.text;
           widget.controller.clear();
           sendTextMessages(message);
+          setState(() {
+            _node.unfocus();
+          });
         },
         voiceMessage: () {
           sendVoiceMessages();

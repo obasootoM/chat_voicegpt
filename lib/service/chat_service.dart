@@ -2,7 +2,7 @@ import 'package:chat_gpt_sdk/chat_gpt_sdk.dart';
 
 class ChatApi {
   final openAI = OpenAI.instance.build(
-      token: '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',
+      token: 'type your openai api',
       baseOption: HttpSetup(receiveTimeout: const Duration(seconds: 20000)),
       enableLog: true);
 
@@ -25,7 +25,7 @@ class ChatApi {
       final request = ChatCompleteText(
           messages: [Messages(role: Role.user, content: text)],
           maxToken: 200,
-          model: GptTurbo0301ChatModel());
+          model: GptTurboChatModel());
       final response = await openAI.onChatCompletion(request: request);
       for (var element in response!.choices) {
         return ("${element.message?.content}");

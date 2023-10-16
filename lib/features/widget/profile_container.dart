@@ -17,12 +17,14 @@ class ProfileContainer extends StatelessWidget {
           color: isMe
               ? Theme.of(context).colorScheme.secondary
               : Colors.grey[500],
-          borderRadius: BorderRadius.only(
-              topLeft: const Radius.circular(5),
-              topRight: const Radius.circular(5),
-              bottomLeft: Radius.circular(isMe ? 0 : 15),
-              bottomRight: Radius.circular(isMe ? 15 : 0))),
-      child: Icon(isMe ? Icons.person : Icons.computer,
+          // borderRadius: BorderRadius.only(
+          //     topLeft: const Radius.circular(5),
+          //     topRight: const Radius.circular(5),
+          //     bottomLeft: Radius.circular(isMe ? 0 : 15),
+          //     bottomRight: Radius.circular(isMe ? 15 : 0))
+              shape: BoxShape.circle
+              ),
+      child: Icon(isMe ? Icons.person : Icons.person_outline_outlined,
       color: Theme.of(context).colorScheme.onSecondary,
       ),
     );

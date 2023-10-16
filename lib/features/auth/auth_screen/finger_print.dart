@@ -1,3 +1,4 @@
+import 'package:chat_voicegpt/constant/const_color.dart';
 import 'package:chat_voicegpt/features/auth/auth_service/auth_service.dart';
 import 'package:chat_voicegpt/features/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ class FingerPrint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ConstantColor.backgroundColor,
       body: Center(
         child: TextButton(
           style: ButtonStyle(
@@ -23,7 +25,9 @@ class FingerPrint extends StatelessWidget {
             },
             child: Text(
               'Login with a touch',
-              style: TextStyle(color: Theme.of(context).colorScheme.primary),
+              style: TextStyle(color: Theme.of(context).colorScheme.primary, 
+              fontSize: 20,
+              fontWeight: FontWeight.bold),
             )),
       ),
     );

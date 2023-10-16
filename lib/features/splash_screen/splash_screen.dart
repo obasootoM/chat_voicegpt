@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:chat_voicegpt/constant/const_color.dart';
 import 'package:chat_voicegpt/constant/image_constant.dart';
 import 'package:chat_voicegpt/features/auth/auth_screen/finger_print.dart';
 import 'package:flutter/material.dart';
@@ -24,8 +25,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 54, 34, 31),
-      body: Center(child: CircleAvatar(child: Image.asset(ImageConstant.splash_Image, height: 40,))),
+      backgroundColor: ConstantColor.backgroundColor,
+      body: Center(child: CircleAvatar(
+        radius: 50,
+        child: Image.asset(ImageConstant.splash_Image, height: 100))),
     );
   }
 }
